@@ -1,0 +1,17 @@
+program Fenix;
+
+uses
+  Vcl.Forms,
+  UNTPrincipal in 'UNTPrincipal.pas' {FormPrincipal},
+  UNTCargaNomina in 'UNTCargaNomina.pas' {FrameCargarNomina: TFrame},
+  UNTConn in 'UNTConn.pas' {DMConn: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TDMConn, DMConn);
+  Application.Run;
+end.
